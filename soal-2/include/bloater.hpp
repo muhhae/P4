@@ -10,8 +10,17 @@
  * - Radius: 15
  */
 
-#include "zombie.h"
+#ifndef BLOATER_HPP
+#define BLOATER_HPP
+
+
+
+#include "zombie.hpp"
 
 class Bloater : public Zombie
 {
+    public :
+        Bloater(int x, int y);
 };
+
+#endif

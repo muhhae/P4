@@ -10,8 +10,16 @@
  * - Radius: 11
  */
 
-#include "zombie.h"
+#ifndef _CLICKER_HPP
+#define _CLICKER_HPP
+
+#include "zombie.hpp"
 
 class Clicker : public Zombie
 {
+    public :
+        Clicker(int x, int y);
 };
+
+
+#endif

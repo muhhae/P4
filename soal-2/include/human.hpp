@@ -8,8 +8,15 @@
  * - Defense: 200-400
  */
 
-#include "entity.h"
+#ifndef _HUMAN_HPP
+#define _HUMAN_HPP
+
+#include "entity.hpp"
 
 class Human : public Entity
 {
+    public :
+        Human(int x, int y);
 };
+
+#endif

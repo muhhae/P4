@@ -10,8 +10,17 @@
  * - Radius: 12
  */
 
-#include "zombie.h"
+#ifndef _STALKER_HPP
+#define _STALKER_HPP
+
+
+#include "zombie.hpp"
 
 class Stalker : public Zombie
 {
+    public :
+        Stalker(int x, int y);
 };
+
+
+#endif

@@ -10,8 +10,16 @@
  * - Radius: 13
  */
 
-#include "zombie.h"
+#ifndef _RUNNER_HPP
+#define _RUNNER_HPP
+
+#include "zombie.hpp"
 
 class Runner : public Zombie
 {
+
+    public :
+        Runner(int x, int y);
 };
+
+#endif
