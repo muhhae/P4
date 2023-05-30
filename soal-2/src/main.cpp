@@ -19,7 +19,7 @@
 #define WORLD_WIDTH 100 // Based on the problem statement
 #define WORLD_HEIGHT 100
 #define NUM_HUMANS 100
-#define NUM_RUNNERS 10
+#define NUM_RUNNERS 20
 #define NUM_STALKERS 8
 #define NUM_CLICKERS 4
 #define NUM_BLOATERS 2

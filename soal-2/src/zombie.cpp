@@ -7,6 +7,7 @@
 #include "zombie.hpp"
 
 #include <cmath>
+#include <conio.h>
 
 Zombie::Zombie()
 {
@@ -61,6 +62,8 @@ void Zombie::findHuman(std::vector<std::unique_ptr<Entity>>* m_entity)
             swapPos(closestHuman);
             closestHuman->setInfected(1);
             closestHuman->setTransformChance((10 - lethality));
+            // std::cout<<"chance in zbi class : "<<closestHuman->getTransformChance()<<std::endl;
+            // getch();
             break;
         case 2:
             // std::cout<<"Zombie Kalah"<<std::endl;

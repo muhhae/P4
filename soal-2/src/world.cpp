@@ -76,8 +76,8 @@ void World::runSimulation()
       }
     }
 
-    std::cout<<"\nDay\n "<<day;
-    std::cout<<"\nHuman : "<<human;
+    std::cout<<"\nDay "<<day;
+    std::cout<<"\n\nHuman : "<<human;
     std::cout<<"\nInfected : "<<infected;
     std::cout<<"\nRunner : "<<runner;
     std::cout<<"\nStalker : "<<stalker;
@@ -94,11 +94,12 @@ void World::runSimulation()
           {
             int random = 1 + rand()%10;
 
-            // std::cout<<"";
+            // std::cout<<"Random : "<<random<<std::endl;
+            // std::cout<<"Change : "<<m_entity[i]->getTransformChance()<<std::endl;
 
             if (random <= m_entity[i]->getTransformChance())
             {
-              // std::cout<<"New Runner is expected"<<std::endl;
+              //std::cout<<"New Runner to be expected"<<std::endl;
               m_entity[i] = std::unique_ptr<Entity>(new Runner(m_entity[i]->getPos().getX(), m_entity[i]->getPos().getY()));
             }
             else 
@@ -106,6 +107,7 @@ void World::runSimulation()
               // std::cout<<"Human Mati"<<std::endl;
               m_entity[i]->setAlive(0);
             }
+            
           }
           else
           {
@@ -147,7 +149,7 @@ void World::runSimulation()
 
     if (human == t_human && infected == t_infected && runner == t_runner && clicker == t_clicker && stalker == t_stalker && bloater == t_bloater)
     {
-      std::cout<<"\nNo Change have been made, Simulation Ended\n"<<std::endl;
+      std::cout<<"\nThe battle turned to stalemate, Simulation Ended\n"<<std::endl;
       return;
     }
     else {

@@ -84,8 +84,8 @@ class Entity
         virtual void setLethality(int lethality){}
         virtual void setRadius(int radius){}
 
-        virtual void setTransformChance(int transformChange){}
-        virtual int getTransformChance(){return 0;}
+        virtual void setTransformChance(int transformChange);
+        virtual int getTransformChance();
 
 };
 

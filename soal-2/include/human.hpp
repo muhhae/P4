@@ -20,6 +20,7 @@ class Human : public Entity
     public :
         Human(int x, int y);
         void setTransformChance(int transformChange){this->transformChange = transformChange;}
+        int getTransformChance(){return transformChange;}
 };
 
 #endif
