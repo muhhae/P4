@@ -22,23 +22,23 @@ void World::populate(int human, int runner, int stalker, int clicker, int bloate
 {
   for (int i = 0; i < human; i++) 
   {
-    m_entity.push_back(std::unique_ptr<Entity>(new Human(rand() % 101, rand() % 101)));
+    m_entity.push_back(std::unique_ptr<Entity>(new Human(rand() % width + 1, rand() % height + 1)));
   }
   for (int i = 0; i < runner; i++) 
   {
-    m_entity.push_back(std::unique_ptr<Entity>(new Runner(rand() % 101, rand() % 101)));
+    m_entity.push_back(std::unique_ptr<Entity>(new Runner(rand() % width + 1, rand() % height + 1)));
   }
   for (int i = 0; i < stalker; i++) 
   {
-    m_entity.push_back(std::unique_ptr<Entity>(new Stalker(rand() % 101, rand() % 101)));
+    m_entity.push_back(std::unique_ptr<Entity>(new Stalker(rand() % width + 1, rand() % height + 1)));
   }
   for (int i = 0; i < clicker; i++) 
   {
-    m_entity.push_back(std::unique_ptr<Entity>(new Clicker(rand() % 101, rand() % 101)));
+    m_entity.push_back(std::unique_ptr<Entity>(new Clicker(rand() % width + 1, rand() % height + 1)));
   }
   for (int i = 0; i < bloater; i++) 
   {
-    m_entity.push_back(std::unique_ptr<Entity>(new Bloater(rand() % 101, rand() % 101)));
+    m_entity.push_back(std::unique_ptr<Entity>(new Bloater(rand() % width + 1, rand() % height + 1)));
   }
 }
 
@@ -56,6 +56,7 @@ void World::runSimulation()
 
   while (1)
   {
+    system("cls");
     day++;
     human = 0; infected = 0; runner = 0; clicker = 0; stalker = 0; bloater = 0;
     
@@ -93,7 +94,7 @@ void World::runSimulation()
           {
             int random = 1 + rand()%10;
 
-            std::cout<<"";
+            // std::cout<<"";
 
             if (random <= m_entity[i]->getTransformChance())
             {
