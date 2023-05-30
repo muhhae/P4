@@ -5,7 +5,6 @@
  */
 
 #include "zombie.hpp"
-#include "vectPointer.hpp"
 
 #include <cmath>
 

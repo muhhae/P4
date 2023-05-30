@@ -42,7 +42,7 @@ class Entity
 
     public :
         Entity(){age = 0; atk = 0; def = 0; setPos(0,0); infected = 0;}
-        Entity(int x, int y){age = 0; atk = 0; def = 0; setPos(x,y); int t; }
+        Entity(int x, int y){age = 0; atk = 0; def = 0; setPos(x,y);}
 
         std::string getTransformTo();
         void setTransformTo(std::string transformTo){this->transformTo = transformTo;}
