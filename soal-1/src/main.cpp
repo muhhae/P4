@@ -4,9 +4,19 @@ using namespace std;
 
 int main()
 {
+    srand(time(NULL));
     while(1)
     {
-        Game m_game; 
+        char in = 0;
+        cout<<"\nAuto ? y/n"<<endl;
+        while (1)
+        {
+            in = getch();
+            if (in == 'n' || in == 'y') break;
+        }
+
+        Game m_game(in == 'y'); 
+
         cout<<"\nSimulation is over. Try Again y/n"<<endl;
 
         bool tryAgain;

@@ -7,6 +7,8 @@
 
 #include <memory>
 #include <conio.h>
+#include <cstdlib>
+#include <ctime>
 
 #include "demon.hpp"
 #include "troops.hpp"
@@ -18,6 +20,7 @@
 #include "knight.hpp"
 #include "mage.hpp"
 
+
 class Game
 {
     private:
@@ -27,9 +30,10 @@ class Game
         Council m_council;
 
         int Round = 0;
+        bool isAuto;
         
     public:
-        Game();
+        Game(bool isAuto);
         ~Game();
         void gameLoop();
 };
