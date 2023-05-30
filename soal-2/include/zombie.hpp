@@ -11,7 +11,6 @@
 #include <vector>
 #include <memory>
 
-#include "human.hpp"
 #include "entity.hpp"
 
 class Zombie : public Entity
@@ -25,8 +24,8 @@ class Zombie : public Entity
     public :
         Zombie();
 
-        void findHuman(std::vector<std::unique_ptr<Entity>> m_entity);
-        void atkHuman(Human* human);
+        void findHuman(std::vector<std::unique_ptr<Entity>>* m_entity);
+        int atkHuman(Entity* human);
 
         int getLethality(){return lethality;}
         int getRadius(){return radius;}

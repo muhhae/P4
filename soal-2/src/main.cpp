@@ -28,15 +28,36 @@ using namespace std;
 
 int main()
 {
-  // srand(time(NULL));
+  srand(time(NULL));
   World world(WORLD_WIDTH, WORLD_HEIGHT);
   world.populate(NUM_HUMANS, NUM_RUNNERS, NUM_STALKERS, NUM_CLICKERS, NUM_BLOATERS);
-  world.print();
-  // world.runSimulation();
+  // world.print();
+
+  world.runSimulation();
   // unique_ptr<Entity> tes;
 
   // tes = unique_ptr<Entity>(new Human(1,2));
   // tes->print();
+
+  // vector<unique_ptr<Entity>> tes;
+
+  // // cout<<"1"<<endl;
+  
+  // tes.push_back(unique_ptr<Entity>(new Human(0, 0)));
+  // // cout<<"2"<<endl;
+  // tes.push_back(unique_ptr<Entity>(new Human(21,21)));
+  // // cout<<"3"<<endl;
+  // tes.push_back(unique_ptr<Entity>(new Runner(1,1)));
+  // // cout<<"4"<<endl;
+
+  // for (int i = 0; i < tes.size(); i++) tes[i]->print();
+
+  // tes[2]->findHuman(&tes);
+
+  // for (int i = 0; i < tes.size(); i++) tes[i]->print();
+
+  
+
   
 
   return 0;

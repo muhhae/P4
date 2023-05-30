@@ -15,8 +15,11 @@
 
 class Human : public Entity
 {
+    private :
+        int transformChange;
     public :
         Human(int x, int y);
+        void setTransformChance(int transformChange){this->transformChange = transformChange;}
 };
 
 #endif

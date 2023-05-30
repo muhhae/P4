@@ -26,19 +26,19 @@ class Num
         }
 };
 
-
+void hapus(int i, vector<Num>* n)
+{
+    n->erase(n->begin()+i);
+}
 
 int main()
 {
     vector<Num> tes;
 
-    tes.push_back(Num(1));
-
-    tes[0].setNum(4);
-    tes[0].print();
-
-    tes[0] = Num(3);
-
-    tes[0].print();
+    for (int i = 0; i < 5; i++) tes.push_back(Num(i));
+    for (int i = 0; i < tes.size(); i++) tes[i].print();
+    hapus(3, &tes);
+    for (int i = 0; i < tes.size(); i++) tes[i].print();
+    
     return 0;
 }

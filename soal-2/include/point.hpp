@@ -2,6 +2,7 @@
 #define _POINT_HPP
 
 #include <cmath>
+#include <iostream>
 
 class Point
 {
@@ -20,6 +21,8 @@ class Point
 
         int distanceTo(Point p)
         {
+            // std::cout<<"Msk"<<std::endl;
+            //std::cout<<"jarak : "<<sqrt((x - p.getX()) * (x - p.getX()) + (y - p.getY()) * (y - p.getY()))<<std::endl;
             return sqrt((x - p.getX()) * (x - p.getX()) + (y - p.getY()) * (y - p.getY()));
         }
 

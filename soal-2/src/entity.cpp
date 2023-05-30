@@ -18,5 +18,7 @@ void Entity::print()
 
 void Entity::swapPos(Entity* entity)
 {
-    
+    Point temp = getPos();
+    setPos(entity->getPos());
+    entity->setPos(temp);
 }

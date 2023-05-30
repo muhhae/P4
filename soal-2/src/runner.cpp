@@ -8,7 +8,7 @@
 Runner::Runner(int x, int y)
 {
     setPos(x,y);
-    setTransformTo("Clicker");
+    setTransformTo("Stalker");
     setName("Runner");
     setAgeTransform(2);
 
